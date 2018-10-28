@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+import java.util.Random;
+public class HomeWork4 {
+
+	
+	private static Scanner input;
+	private static int ran(int a) {
+		Random rand = new Random();
+		int j = rand.nextInt(a);
+		return j;
+	}
+	
+	public static void main(String[] args) {
+		
+		int kf = 3,f = 0 ;
+		int n = ran(9);
+		input = new Scanner(System.in);
+		while(f <3) {
+		System.out.print("Введите любое целое число от 0 до 9: ");
+		int number = input.nextInt();
+		if (number == n) {
+			
+			System.out.print("Победа, продолжить?");
+			int g = input.nextInt();
+			if (g==1) {
+				n = ran(9);
+				
+			}
+			else if (g==0) {
+				break;
+			}
+			
+		}	
+		else if(number < n) {
+			System.out.print("Число меньше"+ '\n');
+			f=f+1;
+		}
+		else if(number > n) {
+			System.out.print("Число больше"+ '\n');
+			f=f+1;
+		}
+		
+		else if(f==3) {
+			System.out.print(" продолжить?");
+			int g = input.nextInt();
+		if (g==1) {
+		f=0;
+		
+		}
+		else if (g==0) {
+			break;
+			
+	}
+	
+}}}}
